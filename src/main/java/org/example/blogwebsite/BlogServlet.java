@@ -1,17 +1,22 @@
 package org.example.blogwebsite;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @WebServlet(name="blog", value="/blog") // value is the URL
+@MultipartConfig(fileSizeThreshold = 5_242_880, maxFileSize = 20_971_520L, maxRequestSize = 41_943_040L)
 public class BlogServlet extends HttpServlet {
     private volatile int BLOG_ID = 1;
     private Map<Integer, Blog> blogDB = new LinkedHashMap<>();
@@ -94,6 +99,47 @@ public class BlogServlet extends HttpServlet {
         }
     }
 
-    private void createPost(HttpServletRequest request, HttpServletResponse response) {
+    private void createPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // create a blog object to add to db
+        Blog blog = new Blog();
+        blog.setTitle(request.getParameter("title"));
+        blog.setDateNow();
+        blog.setBody(request.getParameter("body"));
+
+        Part file = request.getPart("file1");
+        if (file != null) {
+            Image image = processImage(file);
+            if (image != null) {
+                blog.setImage(image);
+            }
+        }
+
+        int id;
+        synchronized(this) {
+            id = this.BLOG_ID++;
+            blogDB.put(id, blog);
+        }
+
+        //System.out.println(blog);
+         response.sendRedirect("blog?action=view&blogId=" + id);
+    }
+
+    public Image processImage(Part file) throws IOException {
+        InputStream in = file.getInputStream();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+        // processing the binary data to bytes
+        int read;
+        final byte[] bytes = new byte[1024];
+        while ((read = in.read(bytes)) != -1) {
+            out.write(bytes, 0, read);
+        }
+
+        Image image = new Image();
+        image.setName(file.getSubmittedFileName());
+        image.setContents(out.toByteArray());
+
+        return image;
+
     }
 }
