@@ -62,6 +62,10 @@ public class Blog {
         this.image = image;
     }
 
+    public boolean hasImage() {
+        return image.getName().length() > 0 && image.getContents().length > 0;
+    }
+
     @Override
     public String toString() {
         return "Blog{" +

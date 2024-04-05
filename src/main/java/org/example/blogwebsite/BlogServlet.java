@@ -1,6 +1,7 @@
 package org.example.blogwebsite;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -57,9 +58,47 @@ public class BlogServlet extends HttpServlet {
     }
 
     private void viewPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        String idString = request.getParameter("blogId");
+
+        Blog blog = getBlog(idString, response);
+
+        PrintWriter out = response.getWriter();
+
+        out.println("<html><body><h2>Blog Post</h2>");
+        out.println("<h3>" + blog.getTitle()+ "</h3>");
+        out.println("<p>Date: " + blog.getDate() + "</p>");
+        out.println("<p>" + blog.getBody() + "</p>");
+        if (blog.hasImage()) {
+            out.println("<a href=\"blog?action=download&blogId=" +
+                    idString + "&image="+ blog.getImage().getName() + "\">" +
+                    blog.getImage().getName() + "</a><br><br>");
+        }
+        out.println("<a href=\"blog\">Return to blog list</a>");
+
+        out.println("</body></html>");
     }
 
     private void downloadImage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        String idString = request.getParameter("blogId");
+
+        Blog blog = getBlog(idString, response);
+
+        String name = request.getParameter("image");
+        if (name == null) {
+            response.sendRedirect("blog?action=view&blogId=" + idString);
+        }
+
+        Image image = blog.getImage();
+        if (image == null) {
+            response.sendRedirect("blog?action=view&blogId=" + idString);
+            return;
+        }
+
+        response.setHeader("Content-Disposition", "image; filename=" + image.getName());
+        response.setContentType("application/octet-stream");
+
+        ServletOutputStream out = response.getOutputStream();
+        out.write(image.getContents());
     }
 
     private void listPosts(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -141,5 +180,28 @@ public class BlogServlet extends HttpServlet {
 
         return image;
 
+    }
+
+    private Blog getBlog(String idString, HttpServletResponse response) throws ServletException, IOException {
+        // empty string?
+        if (idString == null || idString.length() == 0) {
+            response.sendRedirect("blog");
+            return null;
+        }
+        // if not empty try to convert to Integer and get blog to return
+        try {
+            int id = Integer.parseInt(idString);
+            Blog blog = blogDB.get(id);
+            if (blog == null) {
+                response.sendRedirect("blog");
+                return null;
+            }
+
+            return blog;
+        }
+        catch(Exception e ) {
+            response.sendRedirect("blog");
+            return null;
+        }
     }
 }

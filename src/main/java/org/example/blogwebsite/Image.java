@@ -29,4 +29,5 @@ public class Image {
                 ", contents=" + Arrays.toString(contents) +
                 '}';
     }
+
 }

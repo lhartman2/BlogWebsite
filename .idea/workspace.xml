@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="Blog form working, possibly.">
+    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="View is working and fixed the post form processing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Blog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Image.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +127,7 @@
       <updated>1712160220382</updated>
       <workItem from="1712160221407" duration="2867000" />
       <workItem from="1712332780896" duration="19000" />
-      <workItem from="1712332820914" duration="3090000" />
+      <workItem from="1712332820914" duration="4206000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial project.">
       <option name="closed" value="true" />
@@ -159,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712335597958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="View is working and fixed the post form processing.">
+      <option name="closed" value="true" />
+      <created>1712336808700</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712336808700</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +191,7 @@
     <MESSAGE value="Created POJOs" />
     <MESSAGE value="Listing out the blog post page." />
     <MESSAGE value="Blog form working, possibly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Blog form working, possibly." />
+    <MESSAGE value="View is working and fixed the post form processing." />
+    <option name="LAST_COMMIT_MESSAGE" value="View is working and fixed the post form processing." />
   </component>
 </project>
