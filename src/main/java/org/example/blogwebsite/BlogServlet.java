@@ -34,6 +34,21 @@ public class BlogServlet extends HttpServlet {
     }
 
     private void showPostForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        PrintWriter out = response.getWriter();
+
+        out.println("<html><body><h2>Create New Post</h2>");
+        out.println("<form method=\"POST\" action=\"blog\" enctype=\"multipart/form-data\">\n" +
+                "        <input type=\"hidden\" name=\"action\" value=\"create\">\n" +
+                "        Title:<br>\n" +
+                "        <input type=\"text\" name=\"title\"><br><br>\n" +
+                "        Body: <br>\n" +
+                "        <textarea name=\"body\" rows=\"15\" cols=\"50\"></textarea><br><br>\n" +
+                "        Image: <br>\n" +
+                "        <input type=\"file\" name=\"file1\"><br><br>\n" +
+                "        <input type=\"submit\" value=\"Submit\">\n" +
+                "    </form>");
+
+        out.println("</body></html>");
     }
 
     private void viewPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
