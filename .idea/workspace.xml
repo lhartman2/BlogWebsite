@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="View is working and fixed the post form processing.">
+    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="View and download of attachments work.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.191.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.191.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.191" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.191" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -110,13 +108,6 @@
       </method>
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -127,7 +118,10 @@
       <updated>1712160220382</updated>
       <workItem from="1712160221407" duration="2867000" />
       <workItem from="1712332780896" duration="19000" />
-      <workItem from="1712332820914" duration="4206000" />
+      <workItem from="1712332820914" duration="4563000" />
+      <workItem from="1712587667670" duration="597000" />
+      <workItem from="1712588532797" duration="95000" />
+      <workItem from="1712765622930" duration="496000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial project.">
       <option name="closed" value="true" />
@@ -169,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712336808700</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="View and download of attachments work.">
+      <option name="closed" value="true" />
+      <created>1712337904907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712337904907</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +194,7 @@
     <MESSAGE value="Listing out the blog post page." />
     <MESSAGE value="Blog form working, possibly." />
     <MESSAGE value="View is working and fixed the post form processing." />
-    <option name="LAST_COMMIT_MESSAGE" value="View is working and fixed the post form processing." />
+    <MESSAGE value="View and download of attachments work." />
+    <option name="LAST_COMMIT_MESSAGE" value="View and download of attachments work." />
   </component>
 </project>
