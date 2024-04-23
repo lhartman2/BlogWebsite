@@ -45,23 +45,12 @@ public class BlogServlet extends HttpServlet {
 
     private void viewPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         String idString = request.getParameter("blogId");
-
         Blog blog = getBlog(idString, response);
 
-        PrintWriter out = response.getWriter();
+        request.setAttribute("blog", blog);
+        request.setAttribute("blogId", idString);
 
-        out.println("<html><body><h2>Blog Post</h2>");
-        out.println("<h3>" + blog.getTitle()+ "</h3>");
-        out.println("<p>Date: " + blog.getDate() + "</p>");
-        out.println("<p>" + blog.getBody() + "</p>");
-        if (blog.hasImage()) {
-            out.println("<a href=\"blog?action=download&blogId=" +
-                    idString + "&image="+ blog.getImage().getName() + "\">" +
-                    blog.getImage().getName() + "</a><br><br>");
-        }
-        out.println("<a href=\"blog\">Return to blog list</a>");
-
-        out.println("</body></html>");
+        request.getRequestDispatcher("WEB-INF/jsp/view/viewBlog.jsp").forward(request, response);
     }
 
     private void downloadImage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -88,6 +77,10 @@ public class BlogServlet extends HttpServlet {
     }
 
     private void listPosts(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        request.setAttribute("blogDB", blogDB);
+        request.getRequestDispatcher("WEB-INF/jsp/view/listBlogs.jsp").forward(request, response);
+
+/*
         PrintWriter out = response.getWriter();
 
         // heading and link to create blog
@@ -107,7 +100,7 @@ public class BlogServlet extends HttpServlet {
             }
         }
         out.println("</body></html>");
-
+*/
     }
 
     @Override

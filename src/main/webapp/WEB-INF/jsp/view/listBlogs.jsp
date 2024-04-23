@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lhartman2
-  Date: 4/17/2024
-  Time: 11:39 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Blog Posts</title>
 </head>
 <body>
-
+    <h2>Blog Posts</h2>
+    <a href="<c:url value='/blog'>
+            <c:param name='action' value='createBlog'/>
+            </c:url>">Create Post</a><br><br>
+    <c:choose>
+        <c:when test="${blogDB.size() == 0}">
+            <p>There are no blog posts yet...</p>
+        </c:when>
+        <c:otherwise>
+            <c:forEach var="blog" items="${blogDB}">
+                Blog #: <c:out value="${blog.key}"/>
+                <a href="<c:url value='/blog' >
+                    <c:param name='action' value='view'/>
+                    <c:param name='blogId' value='${blog.key}'/>
+                        </c:url>"><c:out value="${blog.value.title}"/></a><br>
+            </c:forEach>
+        </c:otherwise>
+    </c:choose>
 </body>
 </html>
