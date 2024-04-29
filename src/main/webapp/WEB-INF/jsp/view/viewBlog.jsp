@@ -4,7 +4,7 @@
 </head>
 <body>
     <h2>Blog Post</h2>
-    <h3>Blog #<c:out value="${blogId}"/>: <c:out value="${blog.title}"/></h3>
+    <h3>Blog #<c:out value="${blogId}"/> : <c:out value="${blog.title}"/></h3>
     <p>Date: <c:out value="${blog.date}"/></p>
     <p><c:out value="${blog.body}"/></p>
     <c:if test="${blog.hasImage()}">
