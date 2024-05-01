@@ -9,18 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="changed the view and list to using jsp.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/SessionListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/SessionListUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/SessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/sessions.jsp" afterDir="false" />
+    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="Added in authentication with Sessions and a listener to track sessions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/blogForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/blogForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listBlogs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listBlogs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/viewBlog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/viewBlog.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +76,7 @@
 }</component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.191" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.191" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/BlogWebsite_war_exploded/blog" />
       <deployment>
         <artifact name="BlogWebsite:war exploded">
           <settings>
@@ -145,7 +138,7 @@
       <workItem from="1713890803959" duration="320000" />
       <workItem from="1714404291632" duration="4048000" />
       <workItem from="1714414033309" duration="60000" />
-      <workItem from="1714576864026" duration="2575000" />
+      <workItem from="1714576864026" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial project.">
       <option name="closed" value="true" />
@@ -211,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714404313308</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added in authentication with Sessions and a listener to track sessions">
+      <option name="closed" value="true" />
+      <created>1714579705390</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714579705390</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +237,8 @@
     <MESSAGE value="View is working and fixed the post form processing." />
     <MESSAGE value="View and download of attachments work." />
     <MESSAGE value="changed the view and list to using jsp." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the view and list to using jsp." />
+    <MESSAGE value="Added in authentication with Sessions and a listener to track sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added in authentication with Sessions and a listener to track sessions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
