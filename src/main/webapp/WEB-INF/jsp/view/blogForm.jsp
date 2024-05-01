@@ -11,6 +11,7 @@
     <title>Create a New Blog</title>
 </head>
 <body>
+    <a href="<c:url value='/login'>  <c:param name='logout'/></c:url>">Logout</a>
     <h2>Create New Post</h2>
     <form method="POST" action="blog" enctype="multipart/form-data">
         <input type="hidden" name="action" value="create">

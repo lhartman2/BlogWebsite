@@ -3,6 +3,7 @@
     <title>Blog Posts</title>
 </head>
 <body>
+<a href="<c:url value='/login'>  <c:param name='logout'/></c:url>">Logout</a>
     <h2>Blog Posts</h2>
     <a href="<c:url value='/blog'>
             <c:param name='action' value='createBlog'/>
