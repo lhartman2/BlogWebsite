@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="Added in authentication with Sessions and a listener to track sessions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/AuthenticationFilter.java" afterDir="false" />
+    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="Added in the filter to make login easier.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/config/Bootstrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/config/RootContextConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/config/ServletContextConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +140,9 @@
       <workItem from="1713890803959" duration="320000" />
       <workItem from="1714404291632" duration="4048000" />
       <workItem from="1714414033309" duration="60000" />
-      <workItem from="1714576864026" duration="4417000" />
+      <workItem from="1714576864026" duration="4978000" />
+      <workItem from="1715266980402" duration="10000" />
+      <workItem from="1715267636217" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial project.">
       <option name="closed" value="true" />
@@ -212,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714579705390</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added in the filter to make login easier.">
+      <option name="closed" value="true" />
+      <created>1714581632181</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714581632181</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +250,8 @@
     <MESSAGE value="View and download of attachments work." />
     <MESSAGE value="changed the view and list to using jsp." />
     <MESSAGE value="Added in authentication with Sessions and a listener to track sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added in authentication with Sessions and a listener to track sessions" />
+    <MESSAGE value="Added in the filter to make login easier." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added in the filter to make login easier." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
