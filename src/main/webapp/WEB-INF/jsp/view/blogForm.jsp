@@ -13,15 +13,14 @@
 <body>
     <a href="<c:url value='/login'>  <c:param name='logout'/></c:url>">Logout</a>
     <h2>Create New Post</h2>
-    <form method="POST" action="blog" enctype="multipart/form-data">
-        <input type="hidden" name="action" value="create">
-        Title:<br>
-        <input type="text" name="title"><br><br>
-        Body: <br>
-        <textarea name="body" rows="15" cols="50"></textarea><br><br>
-        Image: <br>
-        <input type="file" name="file1"><br><br>
+    <form:form method="POST" action="create" modelAttribute="blog" enctype="multipart/form-data">
+        <form:label path="title">Title:</form:label><br>
+        <form:input path="title"/> <br><br>
+        <form:label path="body:">Body: </form:label><br>
+        <form:input path="body" rows="15" cols="50"/><br><br>
+        <form:label path="image">Image: </form:label><br>
+        <form:input path="image" type="file"/><br><br>
         <input type="submit" value="Submit">
-    </form>
+    </form:form>
 </body>
 </html>

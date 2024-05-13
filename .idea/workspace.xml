@@ -9,12 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="Added in the filter to make login easier.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/config/Bootstrap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/config/RootContextConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/config/ServletContextConfig.java" afterDir="false" />
+    <list default="true" id="99a8c52e-38c0-4f2f-9409-4b95b8258942" name="Changes" comment="Spring bootstrap configuration.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/DownloadView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/blogwebsite/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/base.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/base.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/blogForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/blogForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listBlogs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listBlogs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/viewBlog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/viewBlog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,6 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 10.1.191.executor&quot;: &quot;Run&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -142,7 +145,8 @@
       <workItem from="1714414033309" duration="60000" />
       <workItem from="1714576864026" duration="4978000" />
       <workItem from="1715266980402" duration="10000" />
-      <workItem from="1715267636217" duration="2179000" />
+      <workItem from="1715267636217" duration="5634000" />
+      <workItem from="1715613182448" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial project.">
       <option name="closed" value="true" />
@@ -224,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714581632181</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Spring bootstrap configuration.">
+      <option name="closed" value="true" />
+      <created>1715270114265</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715270114266</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +263,8 @@
     <MESSAGE value="changed the view and list to using jsp." />
     <MESSAGE value="Added in authentication with Sessions and a listener to track sessions" />
     <MESSAGE value="Added in the filter to make login easier." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added in the filter to make login easier." />
+    <MESSAGE value="Spring bootstrap configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring bootstrap configuration." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

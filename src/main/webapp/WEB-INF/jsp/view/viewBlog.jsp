@@ -9,12 +9,9 @@
     <p>Date: <c:out value="${blog.date}"/></p>
     <p><c:out value="${blog.body}"/></p>
     <c:if test="${blog.hasImage()}">
-        <a href="<c:url value='/blog' >
-            <c:param name='action' value='download' />
-            <c:param name='blogId' value='${blogId}' />
-            <c:param name='image' value='${blog.image.name}' />
-        </c:url>"><c:out value="${blog.image.name}"/></a>
+        <a href="<c:url value='/blog/${blogId}/image/${blog.image.name}'/>">
+            <c:out value="${blog.image.name}"/></a>
     </c:if>
-    <br><a href="blog">Return to blog list</a>
+    <br><a href="<c:url value='/blog/list'/>">Return to blog list</a>
 </body>
 </html>

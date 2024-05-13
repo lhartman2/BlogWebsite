@@ -15,10 +15,8 @@
         <c:otherwise>
             <c:forEach var="blog" items="${blogDB}">
                 Blog #: <c:out value="${blog.key}"/>
-                <a href="<c:url value='/blog' >
-                    <c:param name='action' value='view'/>
-                    <c:param name='blogId' value='${blog.key}'/>
-                        </c:url>"><c:out value="${blog.value.title}"/></a><br>
+                <a href="<c:url value='/blog/view/${blog.key}'/>">
+                    <c:out value="${blog.value.title}"/></a><br>
             </c:forEach>
         </c:otherwise>
     </c:choose>
